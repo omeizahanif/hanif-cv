@@ -1,1 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
 
+header,
+main,
+footer {
+    max-width: 95%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+h2 i {
+    font-weight: lighter;
+}
+
+h2.subtitle {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: rgb(47, 164, 218);
+}
+
+article, footer {
+    margin-bottom: 1em;
+    padding: .5em;
+}
+
+.cv-education section {
+    margin-bottom: 2em;
+}
+
+
+.cv-title h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.cv-title h1,
+.cv-title h2,
+.cv-address p {
+    text-align: center;
+    width: 90%;
+    margin: 1em auto;
+}
+
+.cv-address p {
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+.cv-address .cv-email {
+    text-transform: lowercase;
+}
+
+.cv-date {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: .8em;   
+}
+
+section p {
+    line-height: 1.5;
+}
+
+p.cv-grade {
+    line-height: 0;   
+}
+
+p.cv-languages {
+    text-transform: capitalize;
+}
+
+footer {
+    width: 94%;
+}
+
+@media (min-width: 1200px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+        "main1 . sidebar"
+        "main2 . .";
+        column-gap: 10px;                    
+    }
+    
+    .cv-experience {
+        grid-area: main1;
+    }
+    
+    .cv-education {
+        grid-area: main2;
+    }
+
+    .sidebar {
+        grid-area: sidebar
+    }
+}
