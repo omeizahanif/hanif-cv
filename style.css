@@ -11,6 +11,7 @@ footer {
     margin: 1em auto;
     display: flex;
     flex-direction: column; 
+    border: 1px solid gold;
 }
 
 h2 {
@@ -32,9 +33,9 @@ h2.subtitle {
     width: 100px;
 }
 
-article, footer {
+article {
     margin-bottom: 1em;
-    padding: .5em;
+    padding: 1em;
 }
 
 .cv-education section {
@@ -83,9 +84,12 @@ p.cv-languages {
     text-transform: capitalize;
 }
 
-footer {
-    width: 85%;
+
+
+.cv-referees {
+    padding: 1em;
 }
+
 
 @media (min-width: 1000px) {
     main {
@@ -94,7 +98,7 @@ footer {
         grid-template-areas: 
         "main1 . sidebar"
         "main2 . .";
-        column-gap: 20px;                    
+        column-gap: 20px;                  
     }
     
     .cv-experience {
@@ -111,5 +115,9 @@ footer {
 
     section p {
         min-width: 80%;
+    }
+    header, footer {
+        width: 85%;
+        margin: 1em auto;   
     }
 }
